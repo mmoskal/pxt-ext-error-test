@@ -1,9 +1,9 @@
-//% block="JSON" color=#FF0000
+//% block="Test" color=#FF0000
 namespace Test {
-    //% block="Run %fnName on %data if it exists"
-    export function runIfExists(data: any, fnName: string) {
-        if (typeof data === "object" && typeof data[fnName] === "function") {
-            data[fnName]();
+    //% block="Run test on %data"
+    export function runTest(data: any) {
+        if (typeof data === "object" && typeof data.test === "function") {
+            data.test();
         }
     }
 }
